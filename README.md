@@ -47,6 +47,12 @@ yarn db:dev:restart
 
 ```
 
+Caso queira utilizar a interface do Prisma, pode se executar o seguinte comando
+
+```bash
+npx prisma studio
+```
+
 ## APIs REST
 
 ### Producers

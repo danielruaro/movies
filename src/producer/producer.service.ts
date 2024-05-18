@@ -8,7 +8,7 @@ import { PrismaService } from '../prisma/prisma.service';
 export class ProducerService {
     constructor(private prisma: PrismaService) { }
 
-    async getProducerWithHighestInterval(): Promise<any | null> {
+    async getProducersInterval(): Promise<{ min: { producer: string; interval: number; previousWin: number; followingWin: number }[], max: { producer: string; interval: number; previousWin: number; followingWin: number }[] }> {
         const allProducers = await this.prisma.producer.findMany({
             include: {
                 movies: {
