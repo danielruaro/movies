@@ -22,7 +22,6 @@ describe('ProducerController (e2e)', () => {
     beforeEach(async () => {
         await prisma.cleanDatabase();
 
-        // Adicione dados de teste aqui
         await prisma.producer.create({
             data: {
                 name: 'Producer 1',

@@ -36,14 +36,9 @@ yarn install
 Instruções sobre como executar o projeto.
 
 ```bash
-# Inicia o banco de dados POSTGRES utilizando docker e aplica migrations ao banco de dados
-yarn db:dev:start
-
 # Inicia a aplicação, limpa o banco de dados e insere os dados no banco de dados
 yarn start:dev
 
-# Caso queira apagar todos os dados do banco
-yarn db:dev:restart
 
 ```
 
