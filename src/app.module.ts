@@ -17,12 +17,10 @@ import { PrismaModule } from './prisma/prisma.module';
 
 
 export class AppModule implements OnApplicationBootstrap {
-  constructor(private readonly csvService: CsvService) {}
+  constructor(private readonly csvService: CsvService) { }
 
   async onApplicationBootstrap() {
-    if (process.env.NODE_ENV !== 'test') {
-      await this.csvService.lerCSVInserirNoBancoDeDados('./movielist.csv');
-  }
+    await this.csvService.lerCSVInserirNoBancoDeDados('./movielist.csv');
 
   }
 }
